@@ -1,1 +1,81 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kNN-VC Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    audio {
+      display: block;
+      margin-top: 0.5em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: center;
+    }
+    th {
+      background-color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <h1>kNN-VC: Voice Conversion With Just Nearest Neighbors</h1>
+
+  <section>
+    <h2>Samples from kNN-VC</h2>
+    <p>Listen to the converted samples below:</p>
+    <audio controls>
+      <source src="samples/sample1.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <!-- Add more audio samples as needed -->
+  </section>
+
+  <section>
+    <h2>Comparison to Other Methods</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Target</th>
+          <th>kNN-VC</th>
+          <th>VQMIVC</th>
+          <th>YourTTS</th>
+          <th>FreeVC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sample A</td>
+          <td>Speaker X</td>
+          <td><audio controls><source src="samples/knnvc_a_x.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/vqmivc_a_x.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/yourtts_a_x.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/freevc_a_x.wav" type="audio/wav"></audio></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Add more sections for Ablations, Bonus Stuff, etc. -->
+
+</body>
+</html>
