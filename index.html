@@ -36,40 +36,55 @@
   </style>
 </head>
 <body>
-  <h1>kNN-VC: Voice Conversion With Just Nearest Neighbors</h1>
+  <h1>Audio Demo Page</h1>
 
   <section>
-    <h2>Samples from kNN-VC</h2>
-    <p>Listen to the converted samples below:</p>
+    <h2>Samples from Voice Conversion System</h2>
+    <p>Source Samples are from Librispeech dev-clean dataset</p>
     <audio controls>
-      <source src="samples/sample1.wav" type="audio/wav">
+      <source src="samples/original_audio/8842-304647-0004.flac" type="audio/flac">
       Your browser does not support the audio element.
     </audio>
     <!-- Add more audio samples as needed -->
   </section>
 
   <section>
-    <h2>Comparison to Other Methods</h2>
+    <h2>Comparison to other models with different chunk sizes.</h2>
     <table>
       <thead>
         <tr>
-          <th>Source</th>
-          <th>Target</th>
-          <th>kNN-VC</th>
-          <th>VQMIVC</th>
-          <th>YourTTS</th>
-          <th>FreeVC</th>
+          <th>Model</th>
+          <th>9600</th>
+          <th>4800</th>
+          <th>3200</th>
+          <th>1600</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Sample A</td>
-          <td>Speaker X</td>
+          <td>HiFi-GAN V1 orignal </td>
+          <td><audio controls><source src="samples/hifigan_original/9600_orignal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_original/4800_orignal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_original/3200_orignal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_original/1600_orignal.wav" type="audio/wav"></audio></td>
+        </tr>
+        
+        <tr>
+          <td>HiFi-GAN V1 causal </td>
+          <td><audio controls><source src="samples/hifigan_causal/9600_causal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_causal/4800_causal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_causal/3200_causal.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/hifigan_causal/1600_causal.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td>HiFi-GAN V2 causal </td>
           <td><audio controls><source src="samples/knnvc_a_x.wav" type="audio/wav"></audio></td>
           <td><audio controls><source src="samples/vqmivc_a_x.wav" type="audio/wav"></audio></td>
           <td><audio controls><source src="samples/yourtts_a_x.wav" type="audio/wav"></audio></td>
           <td><audio controls><source src="samples/freevc_a_x.wav" type="audio/wav"></audio></td>
         </tr>
+
         <!-- Add more rows as needed -->
       </tbody>
     </table>
