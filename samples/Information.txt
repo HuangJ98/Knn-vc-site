@@ -1,0 +1,10 @@
+These are made on the external System 
+Causal_after: Chunking added though the whole pipleline and cutted after hifigan.
+	-Causal_change is with changepoint
+	-Causawl_without is without changepoint
+	Both contain an original file with the kaggle parameters
+
+Causal_before: Chunking added and then removed before HifiGan
+	- Same Folders as Causal_after with the logic.
+
+Original: as Baseline as it sounds worse on the external system

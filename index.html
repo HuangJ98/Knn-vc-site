@@ -92,6 +92,65 @@
     </table>
   </section>
 
+  <section>
+    <h2>Jupyter Notebook results for context and Changepoint.</h2>
+    <p> The Causal HiFiGan has been used for the whole test.</p>
+    <p> The results are from the shared kaggle script with replaced wavlm,knn and HiFiGan.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>9600</th>
+          <th>4800</th>
+          <th>3200</th>
+          <th>1600</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No Context Baseline </td>
+          <td><audio controls><source src="samples/original_notebook/9600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/original_notebook/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/original_notebook/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/original_notebook/1600.wav" type="audio/wav"></audio></td>
+        </tr>
+        
+        <tr>
+          <td>Before HifiGan without Changepoint</td>
+          <td><audio controls><source src="samples/Causal_before/Causal_without/9600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_without/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_without/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_without/1600.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td>Before HifiGan with Changepoint</td>
+          <td><audio controls><source src="samples/Causal_before/Causal_change/9600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_change/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_change/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_before/Causal_change/1600.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td>After HifiGan without Changepoint</td>
+          <td><audio controls><source src="samples/Causal_after/Causal_without/9600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_without/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_without/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_without/1600.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td>After HifiGan with Changepoint</td>
+          <td><audio controls><source src="samples/Causal_after/Causal_change/9600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_change/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_change/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/Causal_after/Causal_change/1600.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </section>
   <!-- Add more sections for Ablations, Bonus Stuff, etc. -->
 
 </body>
