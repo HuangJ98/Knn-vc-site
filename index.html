@@ -92,10 +92,94 @@
     </table>
   </section>
 
+    <section>
+    <h2>Main results for the report!</h2>
+    <p>All results has been done with the causal checkpoint provided by the main repo and the Notebook script in there.</p>
+    <h2>WavLM chunk and HiFi-GAN full</h2>
+    <p>Only a 0.1 sec chunk with no added context     
+     <audio controls>
+        <source src="samples/report_audio/wavlm_chunk/1600.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+    <p>Only 0.3 sec chunk with no added context     
+     <audio controls>
+        <source src="samples/report_audio/wavlm_chunk/3200.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+
+    <p>A chunk size of 0.1 sec with added previous context of 0.2 sec     
+     <audio controls>
+        <source src="samples/report_audio/wavlm_chunk/4800_context.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+
+    <h2>WavLM full and HiFi-GAN chunk</h2>
+
+    <p>Only a 0.1 sec chunk with no added context     
+     <audio controls>
+        <source src="samples/report_audio/wavlm_full/1600.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+    <p>a 0.1 sec chunk with 0.2 second added previous context
+     <audio controls>
+        <source src="samples/report_audio/wavlm_full/1600_3200.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+
+    <h2>WavLM chunk and HiFi-GAN chunk</h2>
+    <p>We first test the system with only previous context. The total processed size is chunk(0.1 sec) + prev_context(0.1~0.4) with a max of 0.5 sec.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>9600</th>
+          <th>4800</th>
+          <th>3200</th>
+          <th>1600</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><audio controls><source src="samples/report_audio/full_prev/1600.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/report_audio/full_prev/3200.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/report_audio/full_prev/4800.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/report_audio/full_prev/9600.wav" type="audio/wav"></audio></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+    <p>With a small lookahead of 320 samples the audio already improves.    
+     <audio controls>
+        <source src="samples/report_audio/full_prev_look/1600_320.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+
+    <p> With added context of 0.1 sec on both sites the audio already sounds good but there are still click artifacts.
+     <audio controls>
+        <source src="samples/report_audio/full_prev_look/1600_eq.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+
+    <p> These can be further mitigated with a chunk size of 1 sec for both context sites.
+     <audio controls>
+        <source src="samples/report_audio/limit/1_second_both.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+  </section>
+
+
+
   <section>
     <h2>Jupyter Notebook results for context and Changepoint.</h2>
     <p> The Causal HiFiGan has been used for the whole test.</p>
-    <p> The results are from the shared kaggle script with replaced wavlm,knn and HiFiGan.</p>
+    <p> The results are from the shared kaggle script with replaced WavLM,Knn and HiFiGan.</p>
     <table>
       <thead>
         <tr>

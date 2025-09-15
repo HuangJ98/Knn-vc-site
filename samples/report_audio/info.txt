@@ -1,0 +1,12 @@
+Baseline: baseline model
+
+Only done with chunk size of 0.1 sec
+full_prev: chunk passed through the whole Pipeline with total chunk sizes (with added previouvs context)
+
+full_prev_look: chunk passed through the whole Pipeline with total chunk sizes (with added context on both sites)
+
+wavlm_chunk: wavlm chunked but hifigan given full 
+
+wavlm_full: wavlm full and hifigan chunked
+
+Limit : to find the best case Scenarios and Limits of the system
